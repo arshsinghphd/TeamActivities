@@ -91,7 +91,7 @@ These diagrams are meant to be high level! For the actual code of the functions,
 Go back to Homework 01, and write a flowchart for star_rating_app.py. The functions themselves didn't have much in the way of parameters, but they did have return values for you to think about. Discuss the results. 
 
 
-## Writing Functions (Implementation)
+## Writing Functions 
 When ever you work on a function, you want to follow these four steps:
 
 1. Define
@@ -106,7 +106,7 @@ When ever you work on a function, you want to follow these four steps:
 
 ### Example:
 
-I have been given the task of calculating the difference between two colors using the euclidean distance formula. I have been given the following code to start with. RGB stands for the red, green, blue color values. You will explore them in Homework 03. 
+I have been given the task of calculating the difference between two colors using the euclidean distance formula. RGB stands for the red, green, blue color values. You will explore them in Homework 03. The formula can be represented as
 
 $$\frac{\sqrt{(R1-R2)^2+(G1-G2)^2+(B1-B2)^2}}{441}$$
 
@@ -114,7 +114,7 @@ Knowing my problem takes in two colors, I can **define** my function as follows:
 
 ```python
 def delta(red1: int, green1: int, blue1: int, red2: int, green2: int, blue2: int) -> float:
-    pass # this is used so code will still compile, but does nothing
+    pass # this is used so code will still run, but does nothing
 ```
 
 In the above definition I am using **type hints**. They are not required, but I find them helpful in
@@ -122,7 +122,7 @@ understanding what the function is expecting. It could also be written as
 
 ```python
 def delta(red1, green1, blue1, red2, green2, blue2):
-    pass # this is used so code will still compile, but does nothing
+    pass # this is used so code will still run, but does nothing
 ```
 
 My next step is to document, so I have a better understanding of what to do. 
@@ -215,7 +215,66 @@ This seems like a lot for every function, but if I accidently typed `red1+red2` 
 
 # Functions and Scope
 
+A powerful feature of functions is that they have their own "scope". This means that variables defined in the function are not accessible outside of the function. This is a good thing, as it allows us to reuse variable names. 
 
+```python
+def print_name(name):
+    """ Print the user's name. """
+    print(f"Hello {name}!")
+
+def spoiler(name):
+    if name == "River Song":
+        name = "Melody Pond"
+    return "Spoiler"
+
+
+def main():
+    name = "River Song"
+    print_name(name)
+    spoiler(name)
+    print_name(name)
+```
+
+> TASK: Discuss what happens in the above code. What is the output? Why?
+> You should also use the python visualizer to see what happens. Step 15 is important to see what happens to the name variable.
+
+[Python Visualizer Link](https://pythontutor.com/render.html#code=def%20print_name%28name%29%3A%0A%20%20%20%20%22%22%22%20Print%20the%20user's%20name.%20%22%22%22%0A%20%20%20%20print%28f%22Hello%20%7Bname%7D!%22%29%0A%0Adef%20spoiler%28name%29%3A%0A%20%20%20%20if%20name%20%3D%3D%20%22River%20Song%22%3A%0A%20%20%20%20%20%20%20%20name%20%3D%20%22Melody%20Pond%22%0A%20%20%20%20return%20%22Spoiler%22%0A%0A%0Adef%20main%28%29%3A%0A%20%20%20%20name%20%3D%20%22River%20Song%22%0A%20%20%20%20print_name%28name%29%0A%20%20%20%20spoiler%28name%29%0A%20%20%20%20print_name%28name%29%0A%0Amain%28%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
+
+
+You will notice every function has its own 'frame' (location in memory) which helps control the different scopes. 
+
+### Visualizing Returns
+
+When a function returns a value, that value is passed back to the function that called it. This is important to understand, as it allows us to build functions that can be used in other functions.  It is also useful as functions can return the values of another function call. Let's look at a more complicated example.
+
+```python
+
+def get_age():
+    """ Get the user's age. """
+    age = int(input("What is your age? "))
+    if age < 1:
+        print("try again")
+        return get_age()
+    return age
+```
+
+> TASK: Discuss what happens in the above code. Then run the visualizer to see what happens.
+
+[Python Visualizer Link](https://pythontutor.com/render.html#code=def%20get_age%28%29%3A%0A%20%20%20%20%22%22%22%20Get%20the%20user's%20age.%20%22%22%22%0A%20%20%20%20age%20%3D%20int%28input%28%22What%20is%20your%20age%3F%20%22%29%29%0A%20%20%20%20if%20age%20%3C%201%3A%0A%20%20%20%20%20%20%20%20print%28%22try%20again%22%29%0A%20%20%20%20%20%20%20%20return%20get_age%28%29%0A%20%20%20%20return%20age%0A%0Aget_age%28%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
+
+By doing the above we added some (minor) error checking on client input, and we can use a function to create a loop in our code! This is a very powerful idea, we will come back to later in the semester. 
+
+## Functions Review
+
+Functions are powerful tools, and they help take large problems and break them up into more solvable parts.
+With every function make sure you repeat the mantra.
+
+1. Define
+2. Document
+3. Implement
+4. Test
+
+This will help you focus your attention on making sure the function does ONE thing and ONE thing well. While we won't always follow this rule (especially in the beginning as we are still lacking some major tools), it is a good rule to follow.
 
 
 ## Last Task: Work on Coding-Practice
