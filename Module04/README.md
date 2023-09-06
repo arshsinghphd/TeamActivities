@@ -1,6 +1,6 @@
 # While loop and Abstraction Discussion
 
-In this workshop, you will warm up using learning about `while` loops, and then explore the concept of abstraction building an small application to illustrate the idea.
+In this Team Activity, you will warm up using learning about `while` loops, and then explore the concept of abstraction building an small application to illustrate the idea.
 
 ## Part 1: While Loops
 
