@@ -201,7 +201,7 @@ All numbers up to 9, not divisible by 3
 
 ## Abstraction
 
-The following walk workshop focused on how we think about problems. When looking at functions, you tend to ask yourself:
+The following team activity focused on how we think about problems. When looking at functions, you tend to ask yourself:
 1. How can I make this one task
 2. How can I make this generalized
 
@@ -216,10 +216,20 @@ Last but not least, remember
 4. Test
 
 For  *a* solution to the problem look at [code.py] in the same directory. There are additional things in the file
-so you can run tests or play with code, but you can also load it into python and run number_print() with various arguments. 
+so you can run tests or play with code, but you can also load it into python and run number_print() with various arguments. You should try out this code, and discuss the solution. **Anything stand out as a question?**
 
+
+## Last Task: Work on Coding-Practice
+Go ahead and open the coding practice at the end of module 03. Have each member of your group pick a different problem, and you will all work on your problems. Make sure to discuss your solution with the team, and paste your code to your *teams* meeting channel! 
+
+At the end of every Team Activity, you will be encouraged to work on coding practice problems as a team. It is important you take this time to talk about solutions, approaches, and make suggestions to each other! You are building a skill needed for technical interviews, and like all new skills it is important to practice. 
+
+
+## Submission
+There is no "submission" for the Team Activity. Make sure you have your notes for the meeting (can be a doc in the files section) in your team's meeting channel. The TAs will check the attendance logs and award points based on attendance and completed notes. 
 
 
 
 [template]: template.py
 [code.py]: code.py
+
