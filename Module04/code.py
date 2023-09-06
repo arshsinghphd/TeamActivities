@@ -3,7 +3,13 @@ This file provides the code from the workshop.
 """
 from typing import Dict, Any
 
-
+EXAMPLES_MENU = \
+""" 
+Here are options for running examples, please select one or X to exit:
+1. is_numeric_test - checks to see if an input isnumeric
+2. test_number_print - Prints numbers divisible by the divisor
+X. Exit the program
+"""
 
 def is_numeric_test() -> None:
     """Checks to see if an input isnumeric"""
@@ -27,7 +33,6 @@ def number_print(divisor: int = 2, max: int = 10, invert:bool= False) -> None:
         max (int, optional): the max numbers to print out to. Defaults to 10.
         invert (bool, optional): True if you want the numbers not divisible by divisor. Defaults to False.
     """
-
     counter = 0
     while(counter <= max):
         if (not invert) and counter % divisor == 0:
@@ -54,25 +59,29 @@ def test_number_print() -> None:
     number_print(3, 9, True)
 
 
-def print_examples(examples: Dict[str, Any]) -> None:
-    """Prints a list of examples"""
-    print("Here are options for running:")
-    for key in examples.keys():
-        print(key)
-    print()
+def get_menu_item() -> str:
+    """Gets a menu item for the examples menu"""
+    print(EXAMPLES_MENU)
+    while True:
+        value = input("Enter a menu item: ").strip().casefold()
+        if value == '1' or value == '2' or value == 'x':
+            return value # exit the loop, and leave the function
+        else:
+            print("Invalid menu item, please try again.")
+    
+
 
 def main() ->  None:
     """Main driver, gives opportunity to load various examples"""
-    paired = {"numeric": is_numeric_test, "nprint" : test_number_print, "evens": evens}
-    prompt = "Enter the examples you would like to see, list to see options, exit to end. "
-    example = input(prompt).strip().casefold()
-    while(example != 'exit'):
-        if example in paired.keys():
-            print(f"Running {paired[example].__name__}()...")
-            paired[example]()
-        else:
-            print_examples(paired)
-        example = input(prompt).strip().casefold()
+    print("Welcome to the examples program.")
+    value = get_menu_item()
+    while value != 'x':
+        if value == '1':
+            is_numeric_test()
+        elif value == '2':
+            test_number_print()
+        value = get_menu_item()
+
     print("thank you.")
 
 

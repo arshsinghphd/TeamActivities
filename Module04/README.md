@@ -36,7 +36,7 @@ graph TD
     s((start)) --> set["set counter to 0"]
     set --> check{"counter < 10"}
     check -- "False" --> E((end))
-    check -- "True" --> P["Print count"]
+    check -- "True" --> P["Print counter"]
     P --> T["add 1 to counter"]
     T --> check
 ```
