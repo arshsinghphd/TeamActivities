@@ -1,6 +1,16 @@
 # Exploring For Loops, Lists, Tuples, Sets
 
-For loops in python go hand in hand with data structures such as lists, tuples, and sets. In this activity, we will explore both the for loop, and dive deeper into sequential data structures. 
+For loops in python go hand in hand with data structures such as lists, and tuples. In this activity, we will explore both the for loop, and dive deeper into sequential data structures. 
+
+### Adding Set
+As a quick reference, a set is a list (mutable) that can't have duplicates.
+
+```python
+good_guys = {"Westley", "Buttercup", "Inigo Montoya", "Fezzik", "Miracle Max"}
+good_guys.add("Westley") # this will not add a duplicate
+print(good_guys)
+```
+
 
 ## Practice With the For (each/in) Loop
 
@@ -60,22 +70,7 @@ print(range(0,10))
 
 > You can also add `step=n` where $n$ is a number, to skip numbers, you should feel free to explore.
 
-Because range exists, we can start blurring the line between while and for loops. Simple counter increments are often best with a for loop. However, there are still cases where `while` shines. For example when you are writing code in star_rating_app, a while makes sense here as we have to check the variable command for the loop condition. 
-
-```python
-command, raw = menu()
-    movies = []
-    while command != "exit":
-        if command.find(',') > 0:
-            movies.append(add_movie(raw))
-        elif command == "add":
-            movies.append(add_movie())
-        elif command == "list":
-            print_movies(movies)
-        else:
-            print("Invalid command: must be add, list, exit, movie,rating.")
-        command, raw = menu()
-```
+Because range exists, we can start blurring the line between while and for loops. Simple counter increments are often best with a for loop. However, there are still cases where `while` shines. Think about the `run()` function in homework 05.
 Your code may be different, this is just one way to write the run() function. 
 
 ## List, Tuple, Set, String
@@ -84,6 +79,7 @@ For loops work best on `sequential data` which is what we current know as
 * list
 * tuple
 * set
+
 
 ### Discussion:
 * As a group talk about the differences between the four sequential data types. 
@@ -215,28 +211,18 @@ Draw the memory structure of what is going on. For tuples, place them together, 
 
 For now, the most important part is understanding the vocabulary. However, as you dive deeper into languages, you will find it matters. If things are immutable, it is often easier to work with them in cases of parallel processing and memory management, but they can be expensive if you have to modify them. This is a constant discussion in computers, speed vs. amount of memory to use. Computers can be infinitely fast, if memory was infinite but neither are true.
 
-## Homework Warmup
 
-You will also see in your homework, we used tuples for everything, because your homework causes you to search though lists of lists, but since those lists are never modified - they were better to represent as tuple of tuples. 
+## Last Task: Work on Coding-Practice
+Go ahead and open the coding practice at the end of module 05 AND module 06 (you won't have a team activity next week). Have each member of your group pick a different problem, and you will all work on your problems. Make sure to discuss your solution with the team, and paste your code to your *teams* meeting channel! 
+
+At the end of every Team Activity, you will be encouraged to work on coding practice problems as a team. It is important you take this time to talk about solutions, approaches, and make suggestions to each other! You are building a skill needed for technical interviews, and like all new skills it is important to practice. 
 
 
-For example, to warm you up to your homework
+## Submission
+There is no "submission" for the Team Activity. Make sure you have your notes for the meeting (can be a doc in the files section) in your team's meeting channel. The TAs will check the attendance logs and award points based on attendance and completed notes. 
 
-```python
-matrix = ((1, 2, 3),
-          (4, 5, 6),
-          (7, 8, 9))
-```
 
-as a group, write a function that takes every nth element from the lists.
 
-For example:
-
-```python
-my_func(n):
-#...
-```
-would return `(2, 5, 8)` if $n$ was `1`.  This is the filter_by_column function in your homework. Go ahead and work on it as a group, but please make sure to give credit to the rest of your group members.  Discuss how you can also test this function.  
 
 [python tutor]: https://pythontutor.com/python-debugger.html
 [Memory Model]: memory_one.png
