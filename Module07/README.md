@@ -6,7 +6,7 @@ into simple cases, and then solving that simple case builds the solution to more
 The problem is people often overcomplicate their point of view, and the solution is to try to force yourself to
 think into the simplest terms.  
 
-In this activity, we will cover some base examples of recursion, and then explore more complex examples to help
+In this activity, we will cover some base examples of recursion, and then explore more complex example to help
 get a better understanding of why recursion.  Recursion is a topic you will continue to come across when working
 within computer science, so don't worry if it takes a bit to understand! As a reminder, if you are
 struggling you are learning. 
@@ -184,15 +184,18 @@ def product(value) -> float:
         return product(value[0]) * product(value[1:])
     return product(value[0])
 ```
-The above code can be challenging. We encourage you to run it in [python tutor] to get a better understanding, but
+The above code can be challenging. We encourage you to run it in [python tutor](https://pythontutor.com/render.html#code=def%20product%28value%29%20-%3E%20float%3A%0A%20%20%20%20if%20isinstance%28value,%20float%29%20or%20isinstance%28value,%20int%29%3A%0A%20%20%20%20%20%20%20%20return%20value%20%20%23%20base%20case,%20we%20have%20just%20a%20single%20number%20no%20list%0A%20%20%20%20if%20len%28value%29%20%3E%201%3A%0A%20%20%20%20%20%20%20%20return%20product%28value%5B0%5D%29%20*%20product%28value%5B1%3A%5D%29%0A%20%20%20%20return%20product%28value%5B0%5D%29%0A%20%20%20%20%0Atest%20%3D%20%2810,%20%281,%20%282,%204,%20%2813,%202%29%29,%2010%29%29%0Aproduct%28test%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false) to get a better understanding, but
 you do not have to fully understand. You will cover what is known as "recursive data structures" in a later class!
 
 
-## Practice
-Work through multiple problems in Coding Practice 07. Make sure to run them in [python tutor] to better
-understand your solutions! 
+## Last Task: Work on Coding-Practice
+Go ahead and pick select coding practices from Modules 01-06, and work on them. Also, since we have passed the HARD CUT OFF for homeworks 01-05 (note: this may vary semester to semester, so make sure to check). You can now discuss as a group some of your solutions. What did you do differently? What did you do the same?  Did someone do something more effectively than you? Discuss the differences between your solutions.  
 
+Obviously, don't do this with any homework that is still open! You do not want to encourage plagiarism, but code reviews are a very powerful skill to learn. Use this time to practice reviewing code and discussing solutions.
+
+
+## Submission
+There is no "submission" for the Team Activity. Make sure you have your notes for the meeting (can be a doc in the files section) in your team's meeting channel. The TAs will check the attendance logs and award points based on attendance and completed notes. 
 
 
 [doctest]: https://docs.python.org/3/library/doctest.html
-[python tutor]: https://pythontutor.com/python-debugger.html
