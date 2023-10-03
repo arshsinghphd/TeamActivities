@@ -3,7 +3,7 @@
 Recursion is at the heart of **divide**, **conquer**, and **glue**. Why? Because many problems can often be broken up 
 into simple cases, and then solving that simple case builds the solution to more complex cases. 
 
-The problem is people often overcomplicate their point of view, and the solution is to try to force yourself to
+The problem is people often over complicate their point of view, and the solution is to try to force yourself to
 think into the simplest terms.  
 
 In this activity, we will cover some base examples of recursion, and then explore more complex example to help
@@ -133,8 +133,14 @@ flowchart LR
 
 Note: start and end are often not included when sketching out function calls like this
 
+> What about negative numbers?  
+> An astute group will notice the function breaks on negatives. This is because the base case is not defined for
+> negative numbers. You can add a check for negative numbers, but it is strange as factorial for
+> a negative is undefined mathematically. In practice, you would want your function to throw a Value or Attribute
+> Error. We will explore that in a future module. 
+
 ### TASK: Visualize it
-As a group use [python tutor] to run the recursive function, and see the function stack and how it builds. Run it
+As a group use [python tutor](https://pythontutor.com/visualize.html#code=def%20factorial%28n%3A%20int%29%20-%3E%20int%3A%0A%20%20%20%20if%20n%20%3D%3D%200%20or%20n%20%3D%3D%201%3A%0A%20%20%20%20%20%20%20%20return%201%20%20%0A%20%20%20%20return%20n%20*%20factorial%28n-1%29%0A%20%20%20%20%0Afactorial%285%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false) to run the recursive function, and see the function stack and how it builds. Run it
 with a variety of input, and then try to "draw out" the results on your own. 
 
 
@@ -159,33 +165,52 @@ Ok... But what if we wanted to add the ability to have more lists or single valu
 ```python
 test = (10, ((1, 2), 4, (13, 2), 10))
 ```
-Seems weird but depending on where you are getting the data, that is possible. 
+Seems weird but depending on where you are getting the data, that is possible. Also, there is a very common application we use daily that does this - math! $$(1 + (2 * 3) + (2 / (2+3))* (10+2))$$ You could have any number of parenthesis inside of the other ones!
 
 ### Discuss? 
 Can you still use a loop to access all the values? If you use `type()` or [`isinstance()`](https://www.w3schools.com/python/ref_func_isinstance.asp) 
 it may be possible, but you would have to know exactly how many nested lists. 
 
-Let's make it harder. Let's say you have list of lists, and you don't know how many you will have. Something like the 
+Let's make it harder. Let's say you have list of lists each representing a math expression, and you don't know how many you will have. Something like the 
 following!
 
 ```python
-test = (10, (1, (2, 4, (13, 2)), 10))
+test = (2, "+", ((3, '*', (7, "-", 1)), "/", 2))
 ```
-> If your head is hurting, that is alright!
+> If your head is hurting, that is alright! The math above would be
+> $$2 + \frac{3 * (7 - 1)}{2}$$
+> It just has extra parenthesis to split the expression up.
 
-The above structure is impossible to do with loops, as the number of nested lists is infinite. However, recursively,
-it is possible, as recursion looks at the simple case and builds up. 
+The above structure is impossible to do with loops, as the number of nested lists is infinite. However, recursively, it is possible, as recursion looks at the simple case and builds up. 
 
 ```python
-def product(value) -> float:
-    if isinstance(value, float) or isinstance(value, int):
-        return value  # base case, we have just a single number no list
-    if len(value) > 1:
-        return product(value[0]) * product(value[1:])
-    return product(value[0])
+def evaluate_expression(expression):
+    if isinstance(expression, int) or isinstance(expression, float):
+        return expression # base case
+    elif isinstance(expression, tuple):
+        left = evaluate_expression(expression[0]) #recursive call
+        operator = expression[1]
+        right = evaluate_expression(expression[2]) #recursive call
+        return do_math(left, operator, right)
+
+def do_math(left, operator, right):
+    if operator == "+":
+        return left + right
+    elif operator == "-":
+        return left - right
+    elif operator == "*":
+        return left * right
+    elif operator == "/":
+        return left / right # yes this will error if right is 0
+    return 0 # default case , not a good idea but works for now. Ideally this should raise an error!
+
+
+math_expression = (2, "+", ((3, '*', (7, "-", 1)), "/", 2))
+result = evaluate_expression(math_expression)
+print(f"Result: {result}")
 ```
-The above code can be challenging. We encourage you to run it in [python tutor](https://pythontutor.com/render.html#code=def%20product%28value%29%20-%3E%20float%3A%0A%20%20%20%20if%20isinstance%28value,%20float%29%20or%20isinstance%28value,%20int%29%3A%0A%20%20%20%20%20%20%20%20return%20value%20%20%23%20base%20case,%20we%20have%20just%20a%20single%20number%20no%20list%0A%20%20%20%20if%20len%28value%29%20%3E%201%3A%0A%20%20%20%20%20%20%20%20return%20product%28value%5B0%5D%29%20*%20product%28value%5B1%3A%5D%29%0A%20%20%20%20return%20product%28value%5B0%5D%29%0A%20%20%20%20%0Atest%20%3D%20%2810,%20%281,%20%282,%204,%20%2813,%202%29%29,%2010%29%29%0Aproduct%28test%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false) to get a better understanding, but
-you do not have to fully understand. You will cover what is known as "recursive data structures" in a later class!
+The above code can be challenging. We encourage you to run it in [python tutor](https://pythontutor.com/render.html#code=def%20evaluate_expression%28expression%29%3A%0A%20%20%20%20if%20isinstance%28expression,%20int%29%20or%20isinstance%28expression,%20float%29%3A%0A%20%20%20%20%20%20%20%20return%20expression%20%23%20base%20case%0A%20%20%20%20elif%20isinstance%28expression,%20tuple%29%3A%0A%20%20%20%20%20%20%20%20left%20%3D%20evaluate_expression%28expression%5B0%5D%29%20%23recursive%20call%0A%20%20%20%20%20%20%20%20operator%20%3D%20expression%5B1%5D%0A%20%20%20%20%20%20%20%20right%20%3D%20evaluate_expression%28expression%5B2%5D%29%20%23recursive%20call%0A%20%20%20%20%20%20%20%20return%20do_math%28left,%20operator,%20right%29%0A%0Adef%20do_math%28left,%20operator,%20right%29%3A%0A%20%20%20%20if%20operator%20%3D%3D%20%22%2B%22%3A%0A%20%20%20%20%20%20%20%20return%20left%20%2B%20right%0A%20%20%20%20elif%20operator%20%3D%3D%20%22-%22%3A%0A%20%20%20%20%20%20%20%20return%20left%20-%20right%0A%20%20%20%20elif%20operator%20%3D%3D%20%22*%22%3A%0A%20%20%20%20%20%20%20%20return%20left%20*%20right%0A%20%20%20%20elif%20operator%20%3D%3D%20%22/%22%3A%0A%20%20%20%20%20%20%20%20return%20left%20/%20right%20%0A%20%20%20%20return%200%20%0A%0Amath_expression%20%3D%20%282,%20%22%2B%22,%20%28%283,%20'*',%20%287,%20%22-%22,%201%29%29,%20%22/%22,%202%29%29%0Aresult%20%3D%20evaluate_expression%28math_expression%29%0Aprint%28f%22Result%3A%20%7Bresult%7D%22%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false) to get a better understanding, but
+you do not have to fully understand. You will cover what is known as "recursive data structures" in a later class which is ideal for this type of situation!
 
 
 ## Last Task: Work on Coding-Practice
