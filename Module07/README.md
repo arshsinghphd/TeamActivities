@@ -186,8 +186,22 @@ def print_word_reverse(word) :
 print_word_reverse("sator arepo tenet opera rotas")
 ```
 
+After trying out the above functions, try this version out:
+
+```python
+def print_word_reverse(word) :
+    if len(word) <= 1:
+        return None
+    print_word_reverse(word[:-1])
+    print(word)
+
+print_word_reverse("sator arepo tenet opera rotas")
+```
+
+What is the difference? Why does it print in reverse order?
+
 ### TASK
-Try the above functions out, see what they do! Then write a function that goes from each end getting smaller, so the output would be the following
+Write a function that goes from *each end* getting smaller, so the output would be the following
 
 ```text
 sator arepo tenet opera rotas
@@ -207,9 +221,11 @@ ene
 n
 ```
 
+Hint: you will want to start with print_word, and then figure out how the slice changes. 
+
 ## Building up sequential data with recursion
 
-Now, items can be returned, so if we wanted to count the number of letters in a word, we could do the following
+Items can be returned, so if we wanted to count the number of letters in a word, we could do the following
 
 ```python
 def count_letters(word) :
@@ -306,7 +322,7 @@ test = [1, 2, 3, [4, 5, 6], 7, 8, 9, [10, 11, 12]]
 We could write a function to flatten it recursively as follows
 
 ```python
-def flatten_list(values):
+def flatten(values):
     if not lst:
         return ()
     if isinstance(lst[0], list) or isinstance(lst[0], tuple):
