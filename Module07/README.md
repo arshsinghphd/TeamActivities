@@ -148,6 +148,84 @@ Note: start and end are often not included when sketching out function calls lik
 As a group use [python tutor](https://pythontutor.com/visualize.html#code=def%20factorial%28n%3A%20int%29%20-%3E%20int%3A%0A%20%20%20%20if%20n%20%3D%3D%200%20or%20n%20%3D%3D%201%3A%0A%20%20%20%20%20%20%20%20return%201%20%20%0A%20%20%20%20return%20n%20*%20factorial%28n-1%29%0A%20%20%20%20%0Afactorial%285%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false) to run the recursive function, and see the function stack and how it builds. Run it
 with a variety of input, and then try to "draw out" the results on your own. 
 
+## Recursion Looping Through Sequential Data
+
+In python, it is often easier to take a sub-list by using the slice operator. For example, if we wanted to take the
+first 3 elements of a list, we could do the following
+
+```python
+test = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+sub_list = test[:3]
+print(sub_list)
+```
+
+That same idea can be used when passing in parameters to a recursive function. For example, if we wanted to print
+each letter in a word, we could do the following
+
+
+```python
+def print_word(word) :
+    print(word)
+    if len(word) <= 1:
+        return None
+    return print_word(word[1:])
+
+print_word("sator arepo tenet opera rotas")
+```
+(Yes, that is a palindrome, and yes, it is a square!) 
+
+I could even take this idea, and print each letter in a word in reverse order!
+
+```python
+def print_word_reverse(word) :
+    print(word)
+    if len(word) <= 1:
+        return None
+    return print_word_reverse(word[:-1])
+
+print_word_reverse("sator arepo tenet opera rotas")
+```
+
+### TASK
+Try the above functions out, see what they do! Then write a function that goes from each end getting smaller, so the output would be the following
+
+```text
+sator arepo tenet opera rotas
+ator arepo tenet opera rota
+tor arepo tenet opera rot
+or arepo tenet opera ro
+r arepo tenet opera r
+ arepo tenet opera 
+arepo tenet opera
+repo tenet oper
+epo tenet ope
+po tenet op
+o tenet o
+ tenet 
+tenet
+ene
+n
+```
+
+## Building up sequential data with recursion
+
+Now, items can be returned, so if we wanted to count the number of letters in a word, we could do the following
+
+```python
+def count_letters(word) :
+    if len(word) <= 1:
+        return 1
+    return 1 + count_letters(word[1:])
+```
+
+Discuss, why does this work? Why do you need to have the return 1?
+
+
+### TASK
+As a team write a function that reverses a word. For example, "hello" would be "olleh". 
+
+
+
 
 ## Why Recursion - Deep Dive?
 
@@ -217,6 +295,26 @@ print(f"Result: {result}")
 The above code can be challenging. We encourage you to run it in [python tutor](https://pythontutor.com/render.html#code=def%20evaluate_expression%28expression%29%3A%0A%20%20%20%20if%20isinstance%28expression,%20int%29%20or%20isinstance%28expression,%20float%29%3A%0A%20%20%20%20%20%20%20%20return%20expression%20%23%20base%20case%0A%20%20%20%20elif%20isinstance%28expression,%20tuple%29%3A%0A%20%20%20%20%20%20%20%20left%20%3D%20evaluate_expression%28expression%5B0%5D%29%20%23recursive%20call%0A%20%20%20%20%20%20%20%20operator%20%3D%20expression%5B1%5D%0A%20%20%20%20%20%20%20%20right%20%3D%20evaluate_expression%28expression%5B2%5D%29%20%23recursive%20call%0A%20%20%20%20%20%20%20%20return%20do_math%28left,%20operator,%20right%29%0A%0Adef%20do_math%28left,%20operator,%20right%29%3A%0A%20%20%20%20if%20operator%20%3D%3D%20%22%2B%22%3A%0A%20%20%20%20%20%20%20%20return%20left%20%2B%20right%0A%20%20%20%20elif%20operator%20%3D%3D%20%22-%22%3A%0A%20%20%20%20%20%20%20%20return%20left%20-%20right%0A%20%20%20%20elif%20operator%20%3D%3D%20%22*%22%3A%0A%20%20%20%20%20%20%20%20return%20left%20*%20right%0A%20%20%20%20elif%20operator%20%3D%3D%20%22/%22%3A%0A%20%20%20%20%20%20%20%20return%20left%20/%20right%20%0A%20%20%20%20return%200%20%0A%0Amath_expression%20%3D%20%282,%20%22%2B%22,%20%28%283,%20'*',%20%287,%20%22-%22,%201%29%29,%20%22/%22,%202%29%29%0Aresult%20%3D%20evaluate_expression%28math_expression%29%0Aprint%28f%22Result%3A%20%7Bresult%7D%22%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false) to get a better understanding, but
 you do not have to fully understand. You will cover what is known as "recursive data structures" in a later class which is ideal for this type of situation!
 
+
+### Another Common Case
+Flattening a list of lists into a single list is another common case where recursion shines. For example, if we had the following list
+
+```python
+test = [1, 2, 3, [4, 5, 6], 7, 8, 9, [10, 11, 12]]
+```
+
+We could write a function to flatten it recursively as follows
+
+```python
+def flatten_list(values):
+    if not lst:
+        return ()
+    if isinstance(lst[0], list) or isinstance(lst[0], tuple):
+        return flatten(lst[0]) + flatten(lst[1:])
+    return lst[:1] + flatten(lst[1:])
+```
+
+That's a lot! Go ahead and discuss, but move onto the next part as you are comfortable. Don't worry, this all comes with practice. 
 
 ## Setup IDE - VS Code 
 For this class, we are setting up [VS Code](https://code.visualstudio.com/Download) for an Integrated Development Environment. You are also free to setup up Pycharm (find the [free student versions](https://www.jetbrains.com/community/education/#students/) or [community version](https://www.jetbrains.com/pycharm/download)). Both are extremely popular IDEs for Python, and it is good to learn them both. As a team, help each other setup up the IDEs on each of your system, and discuss key features. For example, in VS Code, you can right click on a file go to "Run in Interactive Window" and it will run the file in the interactive window. This is a great way to test code quickly, especially if you are working on a function.

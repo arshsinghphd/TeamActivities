@@ -2,6 +2,25 @@
 Module 07 sample code for CS 5001.
 """
 
+def reverse_string(string: str) -> str:
+    """Recursively reverses a string.
+
+    Examples:
+        >>> reverse_string("hello")
+        'olleh'
+        >>> reverse_string("racecar")
+        'racecar'
+
+    Args:
+        string (str): the string to reverse
+
+    Returns:
+        str: the reversed string
+    """
+    if len(string) <= 1:
+        return string
+    return string[-1] + reverse_string(string[:-1])
+
 
 def factorial_iterative(n: int) -> int:
     """
@@ -48,6 +67,29 @@ def factorial(n: int) -> int:
     if n == 0 or n == 1:
         return 1  # done, exit the function immediately
     return n * factorial(n - 1)
+
+def flatten(lst: tuple | list) -> tuple | list:
+    """
+    Flatten a tuple of tuples into a single list.
+
+    Examples:
+        >>> flatten((1, 2, (3, 4)))
+        (1, 2, 3, 4)
+        >>> flatten((1, (2, 3), (4, )))
+        (1, 2, 3, 4)
+
+    Args:
+        lst (tuple): a tuple with one or more tuples inside of it
+
+    Returns:
+        tuple: a single tuple containing all the elements of the input tuples
+    """
+    if not lst:
+        return ()
+    if isinstance(lst[0], tuple) or isinstance(lst[0], list):
+        return flatten(lst[0]) + flatten(lst[1:]) # type: ignore
+    return lst[:1] + flatten(lst[1:]) # type: ignore
+
 
 
 def evaluate_expression(expression) -> int  | float:    
