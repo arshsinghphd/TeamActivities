@@ -218,6 +218,13 @@ The above code can be challenging. We encourage you to run it in [python tutor](
 you do not have to fully understand. You will cover what is known as "recursive data structures" in a later class which is ideal for this type of situation!
 
 
+## Setup IDE - VS Code 
+For this class, we are setting up [VS Code](https://code.visualstudio.com/Download) for an Integrated Development Environment. You are also free to setup up Pycharm (find the [free student versions](https://www.jetbrains.com/community/education/#students/) or [community version](https://www.jetbrains.com/pycharm/download)). Both are extremely popular IDEs for Python, and it is good to learn them both. As a team, help each other setup up the IDEs on each of your system, and discuss key features. For example, in VS Code, you can right click on a file go to "Run in Interactive Window" and it will run the file in the interactive window. This is a great way to test code quickly, especially if you are working on a function.
+
+After you have completed this task, everyone should take a screenshot of their IDE and post it in the team meeting chat, so we know you have it setup properly!
+
+Bonus, you can use git to download homework 07 from github without leaving either IDE!
+
 ## Last Task: Work on Coding-Practice
 Go ahead and pick select coding practices from Modules 01-06, and work on them. Also, since we have passed the HARD CUT OFF for homeworks 01-05 (note: this may vary semester to semester, so make sure to check). You can now discuss as a group some of your solutions. What did you do differently? What did you do the same?  Did someone do something more effectively than you? Discuss the differences between your solutions.  
 
