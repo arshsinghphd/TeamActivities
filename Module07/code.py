@@ -50,29 +50,64 @@ def factorial(n: int) -> int:
     return n * factorial(n - 1)
 
 
-def product(value) -> float:
+def evaluate_expression(expression) -> int  | float:    
     """
-    Takes in structure of numbers in nested lists. building
-    the product of all the numbers across all the lists.
+    Evaluates a mathematical expression in the form of a tuple.
 
     Examples:
-        >>> product((10, 12, (15, 12, (1, 5))))
-        108000
-        >>> product((10, (12, )))
-        120
+        >>> evaluate_expression(1)
+        1
+        >>> evaluate_expression((1, '+', 2))
+        3
+        >>> evaluate_expression((1, '+', (2, '*', 3)))
+        7
 
-    Args:
-        value: a list of number that can continue equal sublists of numbers
+    Args:  
+        expression: a tuple representing a mathematical expression
 
     Returns:
-        the product of all numbers in the lists
+        int | float: the result of the expression
     """
-    if isinstance(value, float) or isinstance(value, int):
-        return value  # base case, we have just a single number no list
-    if len(value) > 1:
-        return product(value[0]) * product(value[1:])
-    return product(value[0])
+    if isinstance(expression, int) or isinstance(expression, float):
+        return expression # base case
+    elif isinstance(expression, tuple):
+        left = evaluate_expression(expression[0]) #recursive call
+        operator = expression[1]
+        right = evaluate_expression(expression[2]) #recursive call
+        return do_math(left, operator, right)
+    return 0 # default case , not a good idea but works for now. Ideally this should raise an error!
 
+def do_math(left : float | int, operator: str, right: float | int) -> float | int:
+    """
+    Performs a mathematical operation on two numbers.
+
+    Examples:
+        >>> do_math(1, '+', 2)
+        3
+        >>> do_math(1, '-', 2)
+        -1
+        >>> do_math(1, '*', 2)
+        2
+        >>> do_math(1, '/', 2)
+        0.5
+    
+    Args:
+        left: the left operand
+        operator: the operator
+        right: the right operand
+    
+    Returns:
+        float | int: the result of the expression
+    """
+    if operator == "+":
+        return left + right
+    elif operator == "-":
+        return left - right
+    elif operator == "*":
+        return left * right
+    elif operator == "/":
+        return left / right # yes this will error if right is 0
+    return 0 # default case , not a good idea but works for now. Ideally this should raise an error!
 
 # this main actually doesn't do anything other than run the doctest when the file is loaded
 # this is another way to run them if you don't run it via the command line

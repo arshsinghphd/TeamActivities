@@ -81,8 +81,13 @@ If you use the above format, this is a command line program you can run that wil
 > python -m doctest -v filename.py
 ```
 
+
 While using [doctest] isn't required, for *pure* functions (no printing, input, or variable mutation), it saves
 time testing as you don't have to write the tests if they are documented in docstrings and doctests is run!
+
+> Install doctest?  
+> Depending on your setup, you may need to install the doctest module. You can do this with `pip install doctest`
+> or `pip3 install doctest` depending on your setup. pip/pip3 is a package manager for python
 
 ## Coding Factorial Recursively 
 
@@ -220,7 +225,7 @@ Obviously, don't do this with any homework that is still open! You do not want t
 
 
 ## Submission
-There is no "submission" for the Team Activity. Make sure you have your notes for the meeting (can be a doc in the files section) in your team's meeting channel. The TAs will check the attendance logs and award points based on attendance and completed notes. 
+There is no "submission" for the Team Activity. Make sure you have your notes for the meeting (can be a doc in the files section) in your team's meeting channel. The TAs will check the attendance logs and award points based on attendance and completed notes.  Make sure to look at [code.py](code.py) for the code examples from this activity, and some other examples of code design (comments, doctest autorun, etc).
 
 
 [doctest]: https://docs.python.org/3/library/doctest.html
