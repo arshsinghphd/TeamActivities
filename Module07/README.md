@@ -340,7 +340,7 @@ After you have completed this task, everyone should take a screenshot of their I
 Bonus, you can use git to download homework 07 from github without leaving either IDE!
 
 ## Last Task: Work on Coding-Practice
-Go ahead and pick select coding practices from Modules 01-06, and work on them. Also, since we have passed the HARD CUT OFF for homeworks 01-05 (note: this may vary semester to semester, so make sure to check). You can now discuss as a group some of your solutions. What did you do differently? What did you do the same?  Did someone do something more effectively than you? Discuss the differences between your solutions.  
+Go ahead and pick coding practices from Modules 01-06, and work on them. Also, since we have passed the HARD CUT OFF for homeworks 01-05 (note: this may vary semester to semester, so make sure to check). You can now discuss as a group some of your solutions. What did you do differently? What did you do the same?  Did someone do something more effectively than you? Discuss the differences between your solutions.  
 
 Obviously, don't do this with any homework that is still open! You do not want to encourage plagiarism, but code reviews are a very powerful skill to learn. Use this time to practice reviewing code and discussing solutions.
 
