@@ -325,7 +325,7 @@ For mac and linux it often is.
 python3 file_loader.py
 ```
 
-I also encourage you to run the file in "Interactive Window" if you are in VSCode. The interactive window can be found by opening the python code in VSCode, and then right clicking and scrolling down to "Run in interactive window" -> "Run current file in interactive window". After that is done, you can type in the functions directly to explore them individually. 
+We also encourage you to run the file in "Interactive Window" if you are in VSCode. The interactive window can be found by opening the python code in VSCode, and then right clicking and scrolling down to "Run in interactive window" -> "Run current file in interactive window". After that is done, you can type in the functions directly to explore them individually. 
 
 
 
