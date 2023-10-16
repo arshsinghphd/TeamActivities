@@ -367,7 +367,7 @@ if __name__ == "__main__":
 Now, from the command line, run the following command. 
 
 ```terminal
-python args_tester.py aloha! world.
+python args_printer.py aloha! world.
 ```
 Remember, it is python3 in mac and linux!
 
