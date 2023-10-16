@@ -383,7 +383,7 @@ What is printed out?  Try it with other arguments.
 
 Take a look at [args_tester.py](args_tester.py). Discuss what you see there. 
 You will notice all functions have been implemented for you except for the 
-`check_args_for_filename` function. The purpose of this function (also used on your homework) is to check a series of arguments for -f filename. If it finds it, it returns the filename, otherwise it returns the empty string. If -f shows up, but a file name
+`check_args_for_filename` function. The purpose of this function (also used on your homework) is to check a series of arguments for `-f filename`. If it finds it, it returns the filename, otherwise it returns the empty string. If -f shows up, but a file name
 is not provided, it raises a ValueError! 
 
 As a team, work on this function, and make sure you understand all the provided code. 
