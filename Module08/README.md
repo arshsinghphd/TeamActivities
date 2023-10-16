@@ -351,7 +351,7 @@ import sys
 print(sys.argv)
 ```
 
-However, this is something that is *much* easier to see in action. Go ahead and create a new file called args_tester.py, and copy the following code into it. 
+However, this is something that is *much* easier to see in action. Go ahead and create a new file called args_printer.py, and copy the following code into it. 
 
 ```python
 import sys
