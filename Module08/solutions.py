@@ -1,6 +1,6 @@
 """Solution file for student work
 """
-
+import sys
 
 def average(values: tuple) -> float:
     if len(values) == 0:
@@ -25,3 +25,12 @@ def check_args_for_filename(argv: list) -> str:
         else:
             raise ValueError("Missing filename after -f")
     return ""
+
+
+def main(argv):
+    for arg in argv:
+        print(arg)
+
+
+if __name__ == "__main__":
+    main(sys.argv)
