@@ -29,7 +29,7 @@ If  you should see the following output:
 ```
 
 * Notice the elements are unique. 
-* They are mutable using `add` and `remove` methods.
+* There are mutable using `add` and `remove` methods.
 
 You will also find that for python you can't add a list or tuple to a set, but you can add a string or a number. 
 
