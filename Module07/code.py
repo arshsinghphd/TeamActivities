@@ -2,6 +2,21 @@
 Module 07 sample code for CS 5001.
 """
 
+
+def print_word(word: str) -> None:  
+    """Prints a word shrinking by one letter each time on
+    both sides of the world until there is nothing left.
+
+    Args:
+        word (str): the word to print
+
+    """
+    print(word)
+    if len(word) <= 1:
+        return None
+    print_word(word[1:-1])
+
+
 def reverse_string(string: str) -> str:
     """Recursively reverses a string.
 
@@ -68,6 +83,7 @@ def factorial(n: int) -> int:
         return 1  # done, exit the function immediately
     return n * factorial(n - 1)
 
+
 def flatten(lst: tuple | list) -> tuple | list:
     """
     Flatten a tuple of tuples into a single list.
@@ -87,12 +103,11 @@ def flatten(lst: tuple | list) -> tuple | list:
     if not lst:
         return ()
     if isinstance(lst[0], tuple) or isinstance(lst[0], list):
-        return flatten(lst[0]) + flatten(lst[1:]) # type: ignore
-    return lst[:1] + flatten(lst[1:]) # type: ignore
+        return flatten(lst[0]) + flatten(lst[1:])  # type: ignore
+    return lst[:1] + flatten(lst[1:])  # type: ignore
 
 
-
-def evaluate_expression(expression) -> int  | float:    
+def evaluate_expression(expression) -> int | float:
     """
     Evaluates a mathematical expression in the form of a tuple.
 
@@ -104,22 +119,23 @@ def evaluate_expression(expression) -> int  | float:
         >>> evaluate_expression((1, '+', (2, '*', 3)))
         7
 
-    Args:  
+    Args:
         expression: a tuple representing a mathematical expression
 
     Returns:
         int | float: the result of the expression
     """
     if isinstance(expression, int) or isinstance(expression, float):
-        return expression # base case
+        return expression  # base case
     elif isinstance(expression, tuple):
-        left = evaluate_expression(expression[0]) #recursive call
+        left = evaluate_expression(expression[0])  # recursive call
         operator = expression[1]
-        right = evaluate_expression(expression[2]) #recursive call
+        right = evaluate_expression(expression[2])  # recursive call
         return do_math(left, operator, right)
-    return 0 # default case , not a good idea but works for now. Ideally this should raise an error!
+    return 0  # default case , not a good idea but works for now. Ideally this should raise an error!
 
-def do_math(left : float | int, operator: str, right: float | int) -> float | int:
+
+def do_math(left: float | int, operator: str, right: float | int) -> float | int:
     """
     Performs a mathematical operation on two numbers.
 
@@ -132,12 +148,12 @@ def do_math(left : float | int, operator: str, right: float | int) -> float | in
         2
         >>> do_math(1, '/', 2)
         0.5
-    
+
     Args:
         left: the left operand
         operator: the operator
         right: the right operand
-    
+
     Returns:
         float | int: the result of the expression
     """
@@ -148,8 +164,9 @@ def do_math(left : float | int, operator: str, right: float | int) -> float | in
     elif operator == "*":
         return left * right
     elif operator == "/":
-        return left / right # yes this will error if right is 0
-    return 0 # default case , not a good idea but works for now. Ideally this should raise an error!
+        return left / right  # yes this will error if right is 0
+    return 0  # default case , not a good idea but works for now. Ideally this should raise an error!
+
 
 # this main actually doesn't do anything other than run the doctest when the file is loaded
 # this is another way to run them if you don't run it via the command line
