@@ -207,7 +207,7 @@ Then for each component, you think about what attributes and methods it needs fo
 > In your own words, describe encapsulation, and discuss with the Movie object which would be good function to exist in movie or not. The "answer" is less than you think, as ideally Movie should only have the methods and attributes that are needed to represent a movie, and other code deals with parsing the file or input from the client. This allows you to use the movie object across programs in different ways!
 
 
-## Finally
+## Last Task: Work on Coding-Practice
 As a group, work on the coding practices from Module #10. Make sure to copy the code into python tutor to discuss the results/see the memory. What happens when an object is passed as a parameter, and then you modify it inside that function?  
 
 

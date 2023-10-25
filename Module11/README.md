@@ -115,7 +115,7 @@ class Stack:
 Take a moment to draw out the visualizations of the queue. What do you think the code is doing? Which side are new items being added to? Which side are items being removed from?
 
 
-## Task
+## Task - Coding Practice
 To get some practice, lets write a program that reads in a file, and either stores that file into a queue or a stack. Then the program will print out the contents of the queue or stack. Since we are doing this as a group, try to break up the tasks between the group members.
 * 1 person - focuses on the queue
 * 1 person - focuses on the stack

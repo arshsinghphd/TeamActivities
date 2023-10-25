@@ -152,7 +152,7 @@ As a group, follow the algorithm and build a dictionary that counts the words. T
 {'apple': 5, 'orange': 3, 'pear': 2, 'banana': 2, 'kiwi': 1}
 ```
 
-### Coding Practice
+### Last Task: Work on Coding-Practice
 Finally, with your group, work on some of the coding practice problems for Module #9. I encourage you to solve them together, and also use [Python Tutor](https://pythontutor.com/python-debugger.html) to view the memory structure of your solution! 
 
 ## Submission
