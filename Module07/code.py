@@ -84,7 +84,7 @@ def factorial(n: int) -> int:
     return n * factorial(n - 1)
 
 
-def flatten(lst: tuple | list) -> tuple | list:
+def flatten(lst: tuple | list) -> list:
     """
     Flatten a tuple of tuples into a single list.
 
@@ -95,16 +95,16 @@ def flatten(lst: tuple | list) -> tuple | list:
         (1, 2, 3, 4)
 
     Args:
-        lst (tuple): a tuple with one or more tuples inside of it
+        lst (list): a tuple with one or more tuples inside of it
 
     Returns:
         tuple: a single tuple containing all the elements of the input tuples
     """
     if not lst:
-        return ()
+        return []
     if isinstance(lst[0], tuple) or isinstance(lst[0], list):
-        return flatten(lst[0]) + flatten(lst[1:])  # type: ignore
-    return lst[:1] + flatten(lst[1:])  # type: ignore
+        return flatten(lst[0]) + flatten(lst[1:])  
+    return list(lst[:1]) + flatten(lst[1:])  
 
 
 def evaluate_expression(expression) -> int | float:
