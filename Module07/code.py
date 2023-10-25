@@ -107,6 +107,34 @@ def flatten(lst: tuple | list) -> list:
     return list(lst[:1]) + flatten(lst[1:])  
 
 
+# this example is a 'more advanced' concept, 
+# here as it was talked about with students who asked
+# but not expected to know or part of the team activity
+def flatten_tail(lst: tuple | list) -> list:
+    """
+    Flatten a tuple of tuples into a single list.
+
+    Examples:
+        >>> flatten_tail((1, 2, (3, 4)))
+        (1, 2, 3, 4)
+        >>> flatten_tail((1, (2, 3), (4, )))
+        (1, 2, 3, 4)
+
+    Args:
+        lst (list): a tuple with one or more tuples inside of it
+
+    Returns:
+        tuple: a single tuple containing all the elements of the input tuples
+    """
+    def flatten_tail_helper(lst: tuple | list, acc: list) -> list:
+        if not lst:
+            return acc
+        if isinstance(lst[0], tuple) or isinstance(lst[0], list):
+            return flatten_tail_helper(lst[0], flatten_tail_helper(lst[1:], acc))
+        acc.append(lst[0])  # append the first element to the accumulator
+        return flatten_tail_helper(lst[1:], acc)
+    return flatten_tail_helper(lst, [])
+
 def evaluate_expression(expression) -> int | float:
     """
     Evaluates a mathematical expression in the form of a tuple.
