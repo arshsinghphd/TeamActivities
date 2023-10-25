@@ -153,7 +153,7 @@ As a group, follow the algorithm and build a dictionary that counts the words. T
 ```
 
 ### Coding Practice
-Finally, with your group select at least two of the modules coding practice problems. I encourage you to solve them together, and also use [Python Tutor](https://pythontutor.com/python-debugger.html) to view the memory structure of your solution! 
+Finally, with your group, work on some of the coding practice problems for Module #9. I encourage you to solve them together, and also use [Python Tutor](https://pythontutor.com/python-debugger.html) to view the memory structure of your solution! 
 
 ## Submission
 There is no "submission" for the Team Activity. Make sure you have your notes for the meeting (can be a doc in the files section) in your team's meeting channel. The TAs will check the attendance logs and award points based on attendance and completed notes.

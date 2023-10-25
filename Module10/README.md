@@ -208,7 +208,8 @@ Then for each component, you think about what attributes and methods it needs fo
 
 
 ## Finally
-As a group, work on a couple coding practices. Make sure to copy the code into python tutor to discuss the results/see the memory. What happens when an object is passed as a parameter, and then you modify it inside that function?  
+As a group, work on the coding practices from Module #10. Make sure to copy the code into python tutor to discuss the results/see the memory. What happens when an object is passed as a parameter, and then you modify it inside that function?  
+
 
 ## Submission
 There is no "submission" for the Team Activity. Make sure you have your notes for the meeting (can be a doc in the files section) in your team's meeting channel. The TAs will check the attendance logs and award points based on attendance and completed notes.
