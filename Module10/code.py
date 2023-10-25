@@ -1,7 +1,3 @@
-
-
-
-
 class Movie: #notice class has its own docstring!
     """Movie class holds title of the movie, the cast, the rating, and year of release. 
 
@@ -44,7 +40,7 @@ class Movie: #notice class has its own docstring!
     
     @rating.setter
     def rating(self, rating: int) -> None:
-        """Sets the rating of the movie,
+        """Sets the rating of the movie.
 
         Args:
             rating (int): the rating of the movie
@@ -70,7 +66,6 @@ class Movie: #notice class has its own docstring!
         Only returns the first instance. 
         If no match is found, returns an empty string.
 
-        
         Args:
             actor (str): the name of the actor to check
         """
@@ -109,7 +104,7 @@ class Movie: #notice class has its own docstring!
     
     def __hash__(self) -> int:
         """Overrides the default implementation, hashing the movie name and year. 
-        This would allow us to store the movie in a set, as it provides properties to make sure it is unique"""
+        This would allow us to store the movie in a set, as it provides properties to make sure it is unique."""
         return hash((self.name, self.year))
 
 

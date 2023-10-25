@@ -2,7 +2,6 @@
 
 Take a moment and list all `types` that come to mind. We have covered a fair number of them, though we may not think of them as `types`. 
 
-
 Here are a few to help you:
 * int - an integer
 * float - a floating point number
@@ -12,8 +11,7 @@ Here are a few to help you:
 * set - an unordered collection of unique objects
 * dict (dictionary) - a mutable mapping of keys to values
 
-
-Technically, with those types it would be possible to write most programs. However, it would be a lot of work. We can make our lives easier by creating our own `types`. We can do this by creating our own `classes`. A `class` is a blueprint for creating objects. An `object` is an instance of a class. 
+Technically, with these types it would be possible to write most programs. However, it would be a lot of work. We can make our lives easier by creating our own `types`. We can do this by creating our own `classes`. A `class` is a blueprint for creating objects. An `object` is an instance of a class. 
 
 Another way to put it, we get to make our own legos! We then use these legos to build our programs.
 
@@ -27,9 +25,8 @@ Another way to put it, we get to make our own legos! We then use these legos to 
 ```
 Anything that is indented under that class "belongs" to that class/object.
 
-> A note on class/object  
+> A note on class/object:
 > The terms are interchangeable in python. For some people, it helps to think of the class as a blueprint, but once the value is created in memory, it is an object. The more you deal with memory structures, the more it helps to have different terms, but for now treat them as interchangeable.
-
 
 ## Creating an Object
 
@@ -130,7 +127,7 @@ However, since rating is not private, we can still write to it.
     4
 ```
 
-It  is also common (especially in other languages), to create two functions for every attribute, a `get` and a `set`. In python, we can do this by using the `@property` decorator, and then `@variable_name.setter` decorator. This is more advanced than this course, but it is worth exploring on your own. The [code.py](code.py) file has an example of this, and why it is useful as we can control some conditions before the value is changed. 
+It is also common (especially in other languages), to create two functions for every attribute, a `get` and a `set`. In python, we can do this by using the `@property` decorator, and then `@variable_name.setter` decorator. This is more advanced than this course, but it is worth exploring on your own. The [code.py](code.py) file has an example of this, and why it is useful as we can control some conditions before the value is changed. 
 
 ## Methods
 Objects have methods, which are functions the "belong" to that object. It means these functions can use the information stored inside of the object, since the `self` parameter is a requirement for a method. 
@@ -162,7 +159,7 @@ We can create our own methods.
 
 
 ## Built-in Methods
-There are a number of methods built into python classes, that are used to make your life easier. A few of them are
+There are a number of methods built into python classes, that are used to make your life easier. A few of them are:
 
 * `__str__` - this is used to return a string representation of the object. The goals is to make it readable (ideally for printing)
 * `__eq__` - this is used to compare two objects. It is used when you use the `==` operator.
@@ -211,5 +208,7 @@ Then for each component, you think about what attributes and methods it needs fo
 
 
 ## Finally
-
 As a group, work on a couple coding practices. Make sure to copy the code into python tutor to discuss the results/see the memory. What happens when an object is passed as a parameter, and then you modify it inside that function?  
+
+## Submission
+There is no "submission" for the Team Activity. Make sure you have your notes for the meeting (can be a doc in the files section) in your team's meeting channel. The TAs will check the attendance logs and award points based on attendance and completed notes.

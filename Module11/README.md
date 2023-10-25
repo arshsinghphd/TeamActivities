@@ -1,4 +1,4 @@
-# Module 11 - FIFO and LIFO
+# Module 11 Activity - FIFO and LIFO
 
 In computer science, you will often hear FIFO and LIFO. These are acronyms for First In First Out and Last In First Out. These are two different ways of organizing data. In this module, we will explore these two different ways of organizing data. How you organize the data in your program can greatly reduce the amount of time it takes to complete a task. This is just a glimpse of what you will really dive into in future courses! 
 
@@ -13,7 +13,6 @@ queue.add("Third Element")
 queue.add("Fourth Element")
 ```
 
-
 ```mermaid
 graph LR
 A[First Element] --> B[Second Element] --> C[Third Element] --> D[Fourth Element]
@@ -25,12 +24,10 @@ If we were to remove an element from the queue, we would remove the first elemen
 queue.remove()
 ```
 
-
 ```mermaid
 graph LR
 B[Second Element] --> C[Third Element] --> D[Fourth Element]
 ```
-
 
 ### Discussion
 Think of cases were you would use a queue. What are some examples of a queue in real life?
@@ -65,7 +62,6 @@ A stack is a data structure where the last element added to the stack will be th
 
 > Fun Fact:   
 > A stack was named after the stack of plates you would use at a restaurant. The first plate you put on the stack is the last plate you would take off the stack. 
-
 
 If we have a stack, and we have four elements, we can visualize it like the following:
 ```python
@@ -133,3 +129,7 @@ Dividing up tasks is common in development. It is important to know how to work 
 
 ## Finally
 Check-in with each other on how your final project is going. 
+
+
+## Submission
+There is no "submission" for the Team Activity. Make sure you have your notes for the meeting (can be a doc in the files section) in your team's meeting channel. The TAs will check the attendance logs and award points based on attendance and completed notes.
