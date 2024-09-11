@@ -207,7 +207,7 @@ def main():
         print(f"{error_count} tests failed!")
 ```
 
-This seems like a lot for every function, but if I accidently typed `red1+red2` instead of minus, it would be a *very* difficult error to catch later. By writing the test function, I can catch the error right away.
+This seems like a lot for every function, but if I accidentally typed `red1+red2` instead of minus, it would be a *very* difficult error to catch later. By writing the test function, I can catch the error right away.
 
 > TASK: 
 > Discuss 
