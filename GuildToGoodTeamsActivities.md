@@ -8,7 +8,7 @@ The following guide is a list of ways you can make sure your team activities are
 * Yes, be caught up on the reading and videos.
   * But even if you aren't caught up, still attend and try to contribute.
 * Use a google doc or word doc that is collaborative and shared to anyone with the link (or if word, the meeting itself) to update for your notes.
-  * Not only does this foster better inaction and discussion (as the notes become a study guide), it also helps the TAs and instructors to see what you are working on.
+  * Not only does this foster better interaction and discussion (as the notes become a study guide), it also helps the TAs and instructors to see what you are working on.
   * Your instructor and TAs may leave comments in the notes as they look through to encourage deeper thinking or to help guide you.
   * For sharing your coding practice, that is better to share it as a file uploaded to your meeting. 
 * Have someone use "Live Share" to share their screen.
