@@ -2,6 +2,18 @@
 
 Well to your first Team Activity (also called  "peer lab"). This is meant to be a time for the team to work through a tutorial like problem, asking questions and seeking better understanding. If you haven't already, make sure to read [The Guide to Quality Team Activities](https://github.com/CS5001-khoury/TeamActivities/blob/main/GuildToGoodTeamsActivities.md)  that was put together by students in past semesters. 
 
+For this Team Activity, you will review two new sets of operators - the conditional operators and the logical operators. You will also learn to use these operators into statements such as if/else statements and general expressions. 
+
+### Learning Objectives
+
+* Define and use various conditional operators
+* Define an duse various logical operators
+* Deal with logic and control flow for programs using if statements
+* Have a better understanding of True/False (bool) data types. 
+
+
+## Conditional Operators
+
 
 
 
