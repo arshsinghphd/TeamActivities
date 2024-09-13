@@ -193,7 +193,7 @@ def pizza_eater(total_slices: int, people: int, slices_wanted: int) -> int:
 Take a moment to research the term 'edge case', :memo: Discuss what edge case means. Thinking about the tests (Examples) above, do you have every edge case? 
 
 Getting used to edge cases is important! You should always think about them. 
-With control flow statements like if/else - every edge case is right on the 'edge' of the condition in addition to extremes. For example, the 0, 0, 0 case is an edge case? Why, because it is checking 0 slides with 0 need. The same would be true with 1, 1, 1, - one slice for one need. (yes, the difference between a `<`, and `<=` operators!)
+With control flow statements like if/else - every edge case is right on the 'edge' of the condition in addition to extremes. For example, the 0, 0, 0 case is an edge case? Why, because it is checking 0 slices with 0 need. The same would be true with 1, 1, 1, - one slice for one need. (yes, the difference between a `<`, and `<=` operators!)
 
 
 > [!IMPORTANT]
