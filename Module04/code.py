@@ -1,7 +1,6 @@
 """
 This file provides the code from the workshop.
 """
-from typing import Dict, Any
 
 EXAMPLES_MENU = \
 """ 
