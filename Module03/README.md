@@ -16,7 +16,7 @@ When working in teams, remember do not let one person do all the work. Make sure
 * Write a function from scratch
 * Understand the Define, Document, Implement, Test Approach
 * Look at flow charts for programs (function calls)
-* Know the key words parameters/arguments, return values, and scope
+* Know the key words parameters/arguments and return values
 
 ### Function Syntax
 
