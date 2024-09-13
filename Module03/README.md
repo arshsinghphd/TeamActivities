@@ -1,14 +1,22 @@
 # Team Activity: Functions
 
-Welcome to your first team activity. These activities are meant to be done as "tutorials" with all team members working on code snippets, sharing information, and talking through the tasks you are asked to accomplish during your 1-2 hour meeting. It is recommended that your team has watched all the module videos before this activity, as it will help you be more effective in your meeting.
-
-For grading, the TA has access to your meeting log. They will be looking for your attendance, and that you have completed the tasks. The TA will also be looking for your notes, which should be in your team's meeting channel. 
-
-Treat this team as one of your study groups of the course! It is important to work together, and learn from each other. Most importantly, it is alright to hold each other accountable to really learning the material (don't give answers, instead encourage understanding)!
-
-## Introduction to Functions
-
 Functions are very powerful tools that without them, we would not be able to program effectively. The reason why is code reuse and abstraction is essential to good programming. However, the difficulty with functions comes with our own mindset when we approach them. Often we try to do *too much* in a single function, and it becomes difficult to read and understand. Instead, your focus should be making functions as simple as possible (even it it means you have more functions).
+
+## Grading
+Grades for team activities will be based on attendance and notes. You must attend, and as a team you need to generate notes that we can confirm your work. Ideally, you upload the notes as a PDF to the team meeting after you build them out or have a shared document everyone in the team meeting can see (including TAs and the instructor). 
+
+> [!TIP] 
+> Good notes become a study guide for you and your team! Make sure they include everything you need to help better understand the weekly material. 
+
+### ⭐ Working in Teams ⭐
+When working in teams, remember do not let one person do all the work. Make sure to work together, and ask questions. It is also better if different people program, and you all take turns programming for various team assignments.
+
+### Learning Objectives
+
+* Write a function from scratch
+* Understand the Define, Document, Implement, Test Approach
+* Look at flow charts for programs (function calls)
+* Know the key words parameters/arguments, return values, and scope
 
 ### Function Syntax
 
@@ -27,14 +35,14 @@ Function Parameters also called Arguments (Args) are the variables that are pass
 ### Function Return 
 Functions can return a value, or they can return nothing. If a function does not return anything, it is said to return `None`. However, good function design will often have functions returning a value. This allows one to map a set of inputs (parameters) to a set of outputs (return values). 
 
-> Discussion TASK:  
-> As a group discuss the following questions:
-> - What is the purpose of a function?
-> - What is the difference between a function parameter and a function return?
-> - What are some things you notice about the syntax of a function?
-> - What are major questions you at this point?
->
-> Take notes on your discussion, and post them to your team's meeting channel.
+#### :memo: Discussion:  
+ As a group discuss the following questions:
+ - What is the purpose of a function?
+ - What is the difference between a function parameter and a function return?
+ - What are some things you notice about the syntax of a function?
+ - What are major questions you at this point?
+
+
 
 ## Visualizing Flow of Functions
 
@@ -84,10 +92,10 @@ For each function, we have a call (invoke) to the function, and then we have the
 
 These diagrams are meant to be high level! For the actual code of the functions, you still want to treat each function separately. 
 
-> KEY IDEA:    
+> [!IMPORTANT]    
 > Functions are meant to be small, and do one thing. This allows us to break down complex problems into smaller problems. It also means when writing a function - focus on the ONE thing it is supposed to do. Don't worry about the rest of the program until you are done with the function.
 
-### TASK: Create a Flowchart
+### :fire: TASK: Create a Flowchart
 Go back to Homework 01, and write a flowchart for star_rating_app.py. The functions themselves didn't have much in the way of parameters, but they did have return values for you to think about. Discuss the results. 
 
 
@@ -209,9 +217,7 @@ def main():
 
 This seems like a lot for every function, but if I accidentally typed `red1+red2` instead of minus, it would be a *very* difficult error to catch later. By writing the test function, I can catch the error right away.
 
-> TASK: 
-> Discuss 
-> Remind yourself  what are edge cases? Did I test for edge cases in the example?
+:memo: Discussion: Remind yourself  what are edge cases? Did I test for edge cases in the example?
 
 # Functions and Scope
 
@@ -235,12 +241,10 @@ def main():
     print_name(name)
 ```
 
-> TASK: Discuss what happens in the above code. What is the output? Why?
+:memo: Discuss: what happens in the above code. What is the output? Why?
+> [!TIP]
 > You should also use the python visualizer to see what happens. Step 15 is important to see what happens to the name variable.
-
-[Python Visualizer Link](https://pythontutor.com/render.html#code=def%20print_name%28name%29%3A%0A%20%20%20%20%22%22%22%20Print%20the%20user's%20name.%20%22%22%22%0A%20%20%20%20print%28f%22Hello%20%7Bname%7D!%22%29%0A%0Adef%20spoiler%28name%29%3A%0A%20%20%20%20if%20name%20%3D%3D%20%22River%20Song%22%3A%0A%20%20%20%20%20%20%20%20name%20%3D%20%22Melody%20Pond%22%0A%20%20%20%20return%20%22Spoiler%22%0A%0A%0Adef%20main%28%29%3A%0A%20%20%20%20name%20%3D%20%22River%20Song%22%0A%20%20%20%20print_name%28name%29%0A%20%20%20%20spoiler%28name%29%0A%20%20%20%20print_name%28name%29%0A%0Amain%28%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
-
-
+[Python Visualizer Link](https://pythontutor.com/render.html#code=def%20print_name%28name%29%3A%0A%20%20%20%20%22%22%22%20Print%20the%20user's%20name.%20%22%22%22%0A%20%20%20%20print%28f%22Hello%20%7Bname%7D!%22%29%0A%0Adef%20spoiler%28name%29%3A%0A%20%20%20%20if%20name%20%3D%3D%20%22River%20Song%22%3A%0A%20%20%20%20%20%20%20%20name%20%3D%20%22Melody%20Pond%22%0A%20%20%20%20return%20%22Spoiler%22%0A%0A%0Adef%20main%28%29%3A%0A%20%20%20%20name%20%3D%20%22River%20Song%22%0A%20%20%20%20print_name%28name%29%0A%20%20%20%20spoiler%28name%29%0A%20%20%20%20print_name%28name%29%0A%0Amain%28%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)  
 You will notice every function has its own 'frame' (location in memory) which helps control the different scopes. 
 
 ### Visualizing Returns
@@ -258,7 +262,7 @@ def get_age():
     return age
 ```
 
-> TASK: Discuss what happens in the above code. Then run the visualizer to see what happens.
+:memo: Discuss: what happens in the above code. Then run the visualizer to see what happens.
 
 [Python Visualizer Link](https://pythontutor.com/render.html#code=def%20get_age%28%29%3A%0A%20%20%20%20%22%22%22%20Get%20the%20user's%20age.%20%22%22%22%0A%20%20%20%20age%20%3D%20int%28input%28%22What%20is%20your%20age%3F%20%22%29%29%0A%20%20%20%20if%20age%20%3C%201%3A%0A%20%20%20%20%20%20%20%20print%28%22try%20again%22%29%0A%20%20%20%20%20%20%20%20return%20get_age%28%29%0A%20%20%20%20return%20age%0A%0Aget_age%28%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
 
@@ -277,10 +281,11 @@ With every function make sure you repeat the mantra.
 This will help you focus your attention on making sure the function does ONE thing and ONE thing well. While we won't always follow this rule (especially in the beginning as we are still lacking some major tools), it is a good rule to follow.
 
 
-## Last Task: Work on Coding-Practice
-Go ahead and open the coding practice at the end of module 02. Have each member of your group pick a different problem, and you will all work on your problems. Make sure to discuss your solution with the team, and paste your code to your *teams* meeting channel! 
 
-At the end of every Team Activity, you will be encouraged to work on coding practice problems as a team. It is important you take this time to talk about solutions, approaches, and make suggestions to each other! You are building a skill needed for technical interviews, and like all new skills it is important to practice. 
+## Last Task: Work on Coding-Practice
+Make sure to work on the [Coding Practice Problems](https://github.com/CS5001-khoury/Resources/blob/main/PracticeProblems.md). Have each member of your group pick a different problem, and you will all work on your problems. Make sure to discuss your solution with the team, and paste your code to your *teams* meeting channel / upload the python .py file! 
+
+At the end of every Team Activity, you will be encouraged to work on coding practice problems as a team. It is important you take this time to talk about solutions, approaches, and make suggestions to each other! You are building a skill needed for technical interviews, and like all new skills it is important to practice.  Some times do the practice problems after the meeting, but then use the chat to comment. Either is fine, but it is important to get feedback and ask questions. 
 
 
 ## Submission
