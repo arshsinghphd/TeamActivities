@@ -12,6 +12,24 @@ within computer science, so don't worry if it takes a bit to understand! As a re
 struggling you are learning. 
 
 
+> [!IMPORTANT]
+> You will actually come across recursion in *every* bridge course (5001, 5002, 5004, 5008). 
+> We will continue to add to it, and approach it in different ways.  As such, know it is something
+> that you will return to later. 
+
+
+### ⭐ Working in Teams ⭐
+When working in teams, remember do not let one person do all the work. Make sure to work together, and ask questions. It is also better if different people program, and you all take turns programming for various team assignments.
+
+### Learning Objectives
+
+* Describe recursion and implement basic cases
+* Examine the use of recursion for more complex cases
+* Discuss situations were recursion is stronger than loops 
+* bonus: run doctests to test your code
+
+
+
 ## Factorial
 One of the  most common recursive "entry" problem is factorial. A factorial is the product of
 integers with all integers smaller than it until 1.
@@ -47,10 +65,8 @@ def factorial_iterative(n: int) -> int:
 ```
 
 ### Task: Write and Document
-> **TASK**  
-> Write out factorial in a file. Make sure to include a full docstring including examples of input/output. Then
-> write test function to test factorial. Question: Did writing a full docstring with examples help you determine the 
-> tests to consider? 
+:fire: **TASK**  
+Write out the iterative solution to factorial in a file. Make sure to include a full docstring including examples of input/output. Question: Did writing a full docstring with examples help you determine the tests to consider? 
 
 #### Advanced  Feature / Discussion 
 When you write a docstring with tests, the format is often what you would see if you ran the function in python 
@@ -85,6 +101,7 @@ If you use the above format, this is a command line program you can run that wil
 While using [doctest] isn't required, for *pure* functions (no printing, input, or variable mutation), it saves
 time testing as you don't have to write the tests if they are documented in docstrings and doctests is run!
 
+> [!NOTE]
 > Install doctest?  
 > Depending on your setup, you may need to install the doctest module. You can do this with `pip install doctest`
 > or `pip3 install doctest` depending on your setup. pip/pip3 is a package manager for python
@@ -144,7 +161,7 @@ Note: start and end are often not included when sketching out function calls lik
 > a negative is undefined mathematically. In practice, you would want your function to throw a Value or Attribute
 > Error. We will explore that in a future module. 
 
-### TASK: Visualize it
+### :fire: TASK: Visualize it
 As a group use [python tutor](https://pythontutor.com/visualize.html#code=def%20factorial%28n%3A%20int%29%20-%3E%20int%3A%0A%20%20%20%20if%20n%20%3D%3D%200%20or%20n%20%3D%3D%201%3A%0A%20%20%20%20%20%20%20%20return%201%20%20%0A%20%20%20%20return%20n%20*%20factorial%28n-1%29%0A%20%20%20%20%0Afactorial%285%29&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false) to run the recursive function, and see the function stack and how it builds. Run it
 with a variety of input, and then try to "draw out" the results on your own. 
 
@@ -186,7 +203,7 @@ def print_word_reverse(word) :
 print_word_reverse("sator arepo tenet opera rotas")
 ```
 
-After trying out the above functions, try this version out:
+:fire: After trying out the above functions, try this version out:
 
 ```python
 def print_word_reverse(word) :
@@ -198,9 +215,9 @@ def print_word_reverse(word) :
 print_word_reverse("sator arepo tenet opera rotas")
 ```
 
-What is the difference? Why does it print in reverse order?
+:memo: What is the difference? Why does it print in reverse order?
 
-### TASK
+### :fire: TASK
 Write a function that goes from *each end* getting smaller, so the output would be the following
 
 ```text
@@ -234,7 +251,7 @@ def count_letters(word) :
     return 1 + count_letters(word[1:])
 ```
 
-Discuss, why does this work? Why do you need to have the return 1?
+:memo: Discuss, why does this work? Why do you need to have the return 1?
 
 
 ### TASK
@@ -266,7 +283,7 @@ test = (10, ((1, 2), 4, (13, 2), 10))
 ```
 Seems weird but depending on where you are getting the data, that is possible. Also, there is a very common application we use daily that does this - math! $$(1 + (2 * 3) + (2 / (2+3))* (10+2))$$ You could have any number of parenthesis inside of the other ones!
 
-### Discuss? 
+### :memo: Discuss? 
 Can you still use a loop to access all the values? If you use `type()` or [`isinstance()`](https://www.w3schools.com/python/ref_func_isinstance.asp) 
 it may be possible, but you would have to know exactly how many nested lists. 
 
@@ -332,21 +349,14 @@ def flatten(values):
 
 That's a lot! Go ahead and discuss, but move onto the next part as you are comfortable. Don't worry, this all comes with practice. 
 
-## Setup IDE - VS Code 
-For this class, we are setting up [VS Code](https://code.visualstudio.com/Download) for an Integrated Development Environment. You are also free to setup up Pycharm (find the [free student versions](https://www.jetbrains.com/community/education/#students/) or [community version](https://www.jetbrains.com/pycharm/download)). Both are extremely popular IDEs for Python, and it is good to learn them both. As a team, help each other setup up the IDEs on each of your system, and discuss key features. For example, in VS Code, you can right click on a file go to "Run in Interactive Window" and it will run the file in the interactive window. This is a great way to test code quickly, especially if you are working on a function.
-
-After you have completed this task, everyone should take a screenshot of their IDE and post it in the team meeting chat, so we know you have it setup properly!
-
-Bonus, you can use git to download homework 07 from github without leaving either IDE!
 
 ## Last Task: Work on Coding-Practice
-Go ahead and pick coding practices from Modules 01-06, and work on them. Also, since we have passed the HARD CUT OFF for homeworks 01-05 (note: this may vary semester to semester, so make sure to check). You can now discuss as a group some of your solutions. What did you do differently? What did you do the same?  Did someone do something more effectively than you? Discuss the differences between your solutions.  
+Make sure to work on the [Coding Practice Problems](https://github.com/CS5001-khoury/Resources/blob/main/PracticeProblems.md). Have each member of your group pick a different problem, and you will all work on your problems. Make sure to discuss your solution with the team, and paste your code to your *teams* meeting channel / upload the python .py file! 
 
-Obviously, don't do this with any homework that is still open! You do not want to encourage plagiarism, but code reviews are a very powerful skill to learn. Use this time to practice reviewing code and discussing solutions.
+At the end of every Team Activity, you will be encouraged to work on coding practice problems as a team. It is important you take this time to talk about solutions, approaches, and make suggestions to each other! You are building a skill needed for technical interviews, and like all new skills it is important to practice.  Some times do the practice problems after the meeting, but then use the chat to comment. Either is fine, but it is important to get feedback and ask questions. 
 
 
 ## Submission
-There is no "submission" for the Team Activity. Make sure you have your notes for the meeting (can be a doc in the files section) in your team's meeting channel. The TAs will check the attendance logs and award points based on attendance and completed notes.  Make sure to look at [code.py](code.py) for the code examples from this activity, and some other examples of code design (comments, doctest autorun, etc).
-
+There is no "submission" for the Team Activity. Make sure you have your notes for the meeting (can be a doc in the files section) in your team's meeting channel. The TAs will check the attendance logs and award points based on attendance and completed notes. 
 
 [doctest]: https://docs.python.org/3/library/doctest.html
