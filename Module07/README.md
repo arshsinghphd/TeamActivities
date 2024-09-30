@@ -254,8 +254,8 @@ def count_letters(word) :
 :memo: Discuss, why does this work? Why do you need to have the return 1?
 
 
-### TASK
-As a team write a function that reverses a word. For example, "hello" would be "olleh". 
+### :fire: TASK
+As a team write a function that reverses a word. For example, "hello" would be "olleh". Note, this means you are returning a string (not printing like above). This about what that means. 
 
 
 
