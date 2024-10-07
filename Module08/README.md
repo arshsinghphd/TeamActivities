@@ -1,5 +1,19 @@
 # Module 08 - Error Handling and Files
 
+For this module, we explore error handling, files, and program arguments. 
+
+### ⭐ Working in Teams ⭐
+When working in teams, remember do not let one person do all the work. Make sure to work together, and ask questions. It is also better if different people program, and you all take turns programming for various team assignments.
+
+### Learning Objectives
+
+* Understand that the computer is a system a program interacts with.
+* Describe the purpose of error handling and some common errors.
+* Open, read, write to a file. 
+* Be able to access the program arguments. 
+
+## Your Operating System
+
 When we work with a program in python, we often forget that we are not interacting directly with a client. Instead,
 we are interacting with an operating system which may or may not give us the answer we need at that moment!
 
@@ -75,13 +89,13 @@ flowchart TD
 That is a lot going on, and it doesn't even include the calls to  memory allocation (storing of variables)! Needless
 to say, your program is only one small part of a very large ecosystem. 
 
-> Discussion:  
-> Discuss this ecosystem. Why would it need to exist this way? Why couldn't your program talk to the 
-> keyboard directly?
+:memo: Discussion:  
+Discuss this ecosystem. Why would it need to exist this way? Why couldn't your program talk to the keyboard directly?
 
 
 ## Try/Except  - Error Handling
-The problem is when do you trust or not trust this ecosystem? 
+> [!IMPORTANT]
+> The problem is when do you trust or not trust this ecosystem? 
 
 The general answer -- whenever you get something from the system -- check your result.
 
@@ -107,8 +121,7 @@ Traceback (most recent call last):
 TypeError: can only concatenate str (not "int") to str
 ```
 
-> Discussion  
-> What are some Errors you have seen? How many can you list?
+:memo: What are some Errors you have seen? How many can you list?
 
 ### When to use Try/Except
 You could fill your code with try/except statements, but that is often overkill. Instead, the general rule is:
@@ -150,11 +163,12 @@ def get_age() -> int:
 you can see how it works if you keep entering invalid ages.  This design pattern is considered a lazy pattern
 as it assumes everything is ok, until an exception is raised. 
 
-> Also, notice the `file=sys.stderr`. This is common, as you are printing to the 'error log' though 
+> [!TIP]
+> Notice the `file=sys.stderr`. This is common, as you are printing to the 'error log' though 
 for most consoles, that is directly to the console. You can read more about it (very in depth) at 
 [Geeks for Geeks: Stderr]
 
-#### 📝 TASK - Getting Valid Numbers
+#### :fire: TASK - Getting Valid Numbers
 As a group write a function `get_valid_int(prompt: str)->int`, that takes in a string for an argument. 
 Prompts the client with that argument, and returns a valid int. You should not 
 check for ranges (greater than O or anything), just that is a valid int.  However, the catch is they can also 
@@ -233,16 +247,13 @@ def main():
 Try running the above code, and work on changing the values in neu_locations so that exceptions are intentionally
 raised. 
 
-> Discussion:  
-> Which versions do you like better, and why? What are the disadvantages and advantages of each?
+:memo: Discussion:  Which versions do you like better, and why? What are the disadvantages and advantages of each?
 
 
 ## File Handling
 File handling is a place where try/except statements are used regularly. Given what you learned above:
 
-> Discuss  
-> Why would you want try/except statements with handling (reading/writing) files? What are some common errors
-> that may happen? (don't worry about the name of the error, just use your own words)
+:memo: Discuss  Why would you want try/except statements with handling (reading/writing) files? What are some common errors that may happen? (don't worry about the name of the error, just use your own words)
 
 ### Reading and Writing Files
 Reading and writing are covered in the course videos. A typical reading with try/catch is
@@ -305,12 +316,9 @@ def load_file(file_name: str) -> tuple:
     return tuple(values)
 ```
 
-> Discussion:
-> Discuss the above code. What parts make sense, what parts could use more elaboration. What benefits
-> would this have for the greater program? For a deeper connection, how does this help
-> other functions to be pure functions?
+:memo: Discussion: Discuss the above code. What parts make sense, what parts could use more elaboration. What benefits  would this have for the greater program? For a deeper connection, how does this help other functions to be pure functions?
 
-#### 📝 TASK - Try it out
+#### :fire: TASK - Try it out
 Look at file loader [file_loader.py](file_loader.py). Discuss what you see there, until
 the group has a better understanding. After you have done this, download file_loader.py, args_tester.py (we will explore this in a moment), and the `.txt` files from the repository. This may be one of those times were cloning the whole repository is helpful!
 
@@ -330,7 +338,7 @@ We also encourage you to run the file in "Interactive Window" if you are in VSCo
 
 
 
-##### 📝 TASK - Update Average
+##### :fire: TASK - Update Average
 
 If you start exploring the function individually, you will find average is not very defensive. For example, what happens if a list is length 0?
 
@@ -373,13 +381,13 @@ Remember, it is python3 in mac and linux!
 
 What is printed out?  Try it with other arguments. 
 
-> Important:  
+> [!IMPORTANT]  
 > From the programs point of view, program/command line arguments are 
 > just a list of string values!!! 
 > As do what you can to pass around the list, and only access argv in a
 > single spot in your code. 
 
-### 📝 TASK - args_tester.py
+### :fire: TASK - args_tester.py
 
 Take a look at [args_tester.py](args_tester.py). Discuss what you see there. 
 You will notice all functions have been implemented for you except for the 
@@ -394,12 +402,13 @@ Then go ahead and run the program using the various command line options, includ
 
 
 ## Last Task: Work on Coding-Practice
-Go ahead and open the coding practice at the end of module 07. Have each member of your group pick a different problem, and you will all work on your problems. Make sure to discuss your solution with the team, and paste your code to your *teams* meeting channel! 
+Make sure to work on the [Coding Practice Problems](https://github.com/CS5001-khoury/Resources/blob/main/PracticeProblems.md). Have each member of your group pick a different problem, and you will all work on your problems. Make sure to discuss your solution with the team, and paste your code to your *teams* meeting channel / upload the python .py file! 
 
-At the end of every Team Activity, you will be encouraged to work on coding practice problems as a team. It is important you take this time to talk about solutions, approaches, and make suggestions to each other! You are building a skill needed for technical interviews, and like all new skills it is important to practice. 
+At the end of every Team Activity, you will be encouraged to work on coding practice problems as a team. It is important you take this time to talk about solutions, approaches, and make suggestions to each other! You are building a skill needed for technical interviews, and like all new skills it is important to practice.  Some times do the practice problems after the meeting, but then use the chat to comment. Either is fine, but it is important to get feedback and ask questions. 
+
 
 ## Submission
-There is no "submission" for the Team Activity. Make sure you have your notes for the meeting (can be a doc in the files section) in your team's meeting channel. The TAs will check the attendance logs and award points based on attendance and completed notes.  This week is a long one, so you may need to schedule extra time. That is fine, as the work in this team activity is directly related to the homework (don't forget!).
+There is no "submission" for the Team Activity. Make sure you have your notes for the meeting (can be a doc in the files section) in your team's meeting channel. The TAs will check the attendance logs and award points based on attendance and completed notes. 
 
 
 [TypeError]: https://www.geeksforgeeks.org/handling-typeerror-exception-in-python/
