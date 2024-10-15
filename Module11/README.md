@@ -2,6 +2,14 @@
 
 In computer science, you will often hear FIFO and LIFO. These are acronyms for First In First Out and Last In First Out. These are two different ways of organizing data. In this module, we will explore these two different ways of organizing data. How you organize the data in your program can greatly reduce the amount of time it takes to complete a task. This is just a glimpse of what you will really dive into in future courses! 
 
+### ⭐ Working in Teams ⭐
+When working in teams, remember do not let one person do all the work. Make sure to work together, and ask questions. It is also better if different people program, and you all take turns programming for various team assignments.
+
+### Learning Objectives
+
+* Describe LIFO and FIFO
+* Code a basic queue and stack
+
 ## First In First Out - A Queue
 Often called "first come first served", a queue is a data structure where the first element added to the queue will be the first element removed from the queue. This is a very common data structure in computer science.
 
@@ -87,7 +95,7 @@ graph TD
 C[Third Element] --> B[Second Element] --> A[First Element]
 ```
 
-### Discussion
+### :memo: Discussion
 Think of cases were you would use a stack. What are some examples of a stack in real life?
 
 To get you thinking more about a stack, here are some examples in computer science:
@@ -115,7 +123,7 @@ class Stack:
 Take a moment to draw out the visualizations of the queue. What do you think the code is doing? Which side are new items being added to? Which side are items being removed from?
 
 
-## Task - Coding Practice
+## :fire: Task - Coding Programs
 To get some practice, lets write a program that reads in a file, and either stores that file into a queue or a stack. Then the program will print out the contents of the queue or stack. Since we are doing this as a group, try to break up the tasks between the group members.
 * 1 person - focuses on the queue
 * 1 person - focuses on the stack
