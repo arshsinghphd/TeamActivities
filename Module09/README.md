@@ -2,6 +2,15 @@
 
 For this learning activity, we will explore dictionaries and methods related to them. 
 
+### ⭐ Working in Teams ⭐
+When working in teams, remember do not let one person do all the work. Make sure to work together, and ask questions. It is also better if different people program, and you all take turns programming for various team assignments.
+
+### Learning Objectives
+
+* Use a dictionary
+* Better understanding of sets, and how they relate to dictionaries 
+
+
 ## Review of Sets
 As a quick review of sets, 
 
@@ -41,7 +50,7 @@ Dictionaries are:
 * Keys are Unique
 * Key:Value pairs are used to access the data
 
-> Discussion Item:  
+> :memo: Discussion Item:  
 > What are some cases you can think of that having a key,value pair would be useful as compared to using list indexes?
 
 ### Deeper Thinking of Use Cases
@@ -79,7 +88,7 @@ Now, let's say you have a list of flight numbers. You can use the dictionary for
 flights =  ['AA2336', 'US840', 'AA245', 'UA940', 'DL2398', 'AS120', 'HA15', 'WN727', 'NK4', 'B6JFK', 'F9ORD', 'VXSEA', 'G4LAS']
 ```
 
-## TASK: Practice
+## :fire: TASK: Practice
 As a group, write a program that will take the list of flights and print out the airline name associated with each flight! 
 
 Notice that the airline code is the first two characters of the flight number, so you can use string splicing to help you get the unique identifier of the airline.
@@ -91,7 +100,7 @@ You can also replace a value of a dictionary using direct access.
 d["UA"] = "United Airlines"
 ```
 
-### Thinking Deeper - what can be keys?
+### :memo: Thinking Deeper - what can be keys?
 You can use any immutable object as a key. This means you can use a string, number, or tuple. You can't use a list or dictionary as a key.  Why do you think this is?  Discuss with your group.
 
 Furthermore, you will get `TypeError: unhashable type: 'list'` if you try to use a list as a key. Hashable means that the object can be converted to a mostly unique number for indexing.  This is a bit of a deep topic, but we will explore it in a future class (CS 5008). Sufficient to know now, when you hear the term "hashmap" or "hashtable" a dictionary in python is a hashmap. 
@@ -134,10 +143,10 @@ values = [1, 2, 3, 4, 5]
 d = dict(zip(keys, values))
 print(d)
 ```
-Try it out! What do you think the output will be? What happens if the lists are not the same length? Discuss with your group.
+:fire: Try it out! What do you think the output will be? What happens if the lists are not the same length? Discuss with your group.
 
 
-## TASK: Practice
+## :fire: TASK: Practice
 
 Let's now also think about the using dictionary to count entries. Assume we have the following list of words:
 
@@ -152,8 +161,11 @@ As a group, follow the algorithm and build a dictionary that counts the words. T
 {'apple': 5, 'orange': 3, 'pear': 2, 'banana': 2, 'kiwi': 1}
 ```
 
-### Last Task: Work on Coding-Practice
-Finally, with your group, work on some of the coding practice problems for Module #9. I encourage you to solve them together, and also use [Python Tutor](https://pythontutor.com/python-debugger.html) to view the memory structure of your solution! 
+## Last Task: Work on Coding-Practice
+Make sure to work on the [Coding Practice Problems](https://github.com/CS5001-khoury/Resources/blob/main/PracticeProblems.md). Have each member of your group pick a different problem, and you will all work on your problems. Make sure to discuss your solution with the team, and paste your code to your *teams* meeting channel / upload the python .py file! 
+
+At the end of every Team Activity, you will be encouraged to work on coding practice problems as a team. It is important you take this time to talk about solutions, approaches, and make suggestions to each other! You are building a skill needed for technical interviews, and like all new skills it is important to practice.  Some times do the practice problems after the meeting, but then use the chat to comment. Either is fine, but it is important to get feedback and ask questions. 
+
 
 ## Submission
-There is no "submission" for the Team Activity. Make sure you have your notes for the meeting (can be a doc in the files section) in your team's meeting channel. The TAs will check the attendance logs and award points based on attendance and completed notes.
+There is no "submission" for the Team Activity. Make sure you have your notes for the meeting (can be a doc in the files section) in your team's meeting channel. The TAs will check the attendance logs and award points based on attendance and completed notes. 

@@ -1,6 +1,18 @@
 # Module 10 Activity - Classes, Objects == Encapsulation
 
-Take a moment and list all `types` that come to mind. We have covered a fair number of them, though we may not think of them as `types`. 
+For this activity you will explore classes and objects.
+
+### ⭐ Working in Teams ⭐
+When working in teams, remember do not let one person do all the work. Make sure to work together, and ask questions. It is also better if different people program, and you all take turns programming for various team assignments.
+
+### Learning Objectives
+
+* Write a basic class
+* Discuss how a class helps with Encapsulation 
+* Define methods for classes and recognize methods in types you already use. 
+
+## Types
+:memo: Take a moment and list all `types` that come to mind. We have covered a fair number of them, though we may not think of them as `types`. 
 
 Here are a few to help you:
 * int - an integer
@@ -25,6 +37,7 @@ Another way to put it, we get to make our own legos! We then use these legos to 
 ```
 Anything that is indented under that class "belongs" to that class/object.
 
+> [!NOTE]
 > A note on class/object:
 > The terms are interchangeable in python. For some people, it helps to think of the class as a blueprint, but once the value is created in memory, it is an object. The more you deal with memory structures, the more it helps to have different terms, but for now treat them as interchangeable.
 
@@ -47,7 +60,7 @@ For example, if we have a class called `Movie`, and we have a number of items th
             self.year = year
 ```
 
-> Discussion Topic:  
+> :memo: Discussion Topic:  
 > Assuming `cast` is a list, why would we want to copy it? Technically we didn't have to do that, but take a moment to draw the memory structure, is a copy "safer" in this case? Why or why not?
 
 
@@ -153,7 +166,7 @@ We can create our own methods.
         return ''
 ```
 
-> Discussion Topic:  
+> :memo: Discussion Topic:  
 > We could have just returned `actor in self.__cast`. Why did we do it this way? What are the pros and cons of the approach
 > used above. You may want to test out the code, and come up with how they are different. 
 
@@ -193,7 +206,7 @@ Then we can do the following:
     *****  The Matrix
 ```
 
-**TASK** Look review the code in the [code.py](code.py) file. Discuss how it can be used in star_rating_app.py. What are the pros and cons of using it? What functions would you have to change? 
+:fire: **TASK** Look review the code in the [code.py](code.py) file. Discuss how it can be used in star_rating_app.py. What are the pros and cons of using it? What functions would you have to change? 
 
 ## Encapsulation
 
@@ -203,13 +216,15 @@ Whenever you work with objects, you try to set them up so they are a single set 
 
 Then for each component, you think about what attributes and methods it needs for that idea to be "complete". For this reason, OOP is the main paradigm used in industry, as it allows team members to focus building very specific objects, while other people assemble those objects into working programs. 
 
-> Discussion Topic:  
+> :memo: Discussion Topic:  
 > In your own words, describe encapsulation, and discuss with the Movie object which would be good function to exist in movie or not. The "answer" is less than you think, as ideally Movie should only have the methods and attributes that are needed to represent a movie, and other code deals with parsing the file or input from the client. This allows you to use the movie object across programs in different ways!
 
 
 ## Last Task: Work on Coding-Practice
-As a group, work on the coding practices from Module #10. Make sure to copy the code into python tutor to discuss the results/see the memory. What happens when an object is passed as a parameter, and then you modify it inside that function?  
+Make sure to work on the [Coding Practice Problems](https://github.com/CS5001-khoury/Resources/blob/main/PracticeProblems.md). Have each member of your group pick a different problem, and you will all work on your problems. Make sure to discuss your solution with the team, and paste your code to your *teams* meeting channel / upload the python .py file! 
+
+At the end of every Team Activity, you will be encouraged to work on coding practice problems as a team. It is important you take this time to talk about solutions, approaches, and make suggestions to each other! You are building a skill needed for technical interviews, and like all new skills it is important to practice.  Some times do the practice problems after the meeting, but then use the chat to comment. Either is fine, but it is important to get feedback and ask questions. 
 
 
 ## Submission
-There is no "submission" for the Team Activity. Make sure you have your notes for the meeting (can be a doc in the files section) in your team's meeting channel. The TAs will check the attendance logs and award points based on attendance and completed notes.
+There is no "submission" for the Team Activity. Make sure you have your notes for the meeting (can be a doc in the files section) in your team's meeting channel. The TAs will check the attendance logs and award points based on attendance and completed notes. 
