@@ -2,10 +2,12 @@
 
 Well to your first Team Activity (also called  "peer lab"). This is meant to be a time for the team to work through a tutorial like problem, asking questions and seeking better understanding. If you haven't already, make sure to read [The Guide to Quality Team Activities](https://github.com/CS5001-khoury/TeamActivities/blob/main/GuildToGoodTeamsActivities.md)  that was put together by students in past semesters. 
 
-For this Team Activity, you will review two new sets of operators - the conditional operators and the logical operators. You will also learn to use these operators into statements such as if/else statements and general expressions. 
+For this Team Activity, you will review two new sets of operators - the **conditional operators** and the **logical operators**. You will also learn to use these operators into statements such as if/else statements and general expressions. 
 
 ## Grading
-Grades for team activities will be based on attendance and notes. You must attend, and as a team you need to generate notes that we can confirm your work. Ideally, you upload the notes as a PDF to the team meeting after you build them out or have a shared document everyone in the team meeting can see (including TAs and the instructor). 
+Grades for team activities are based on attendance, notes, and a weekly practice problem.  You must attend, and as a team you need to generate notes that we can confirm your work. Ideally, you upload the notes as a PDF to the team meeting after you build them out or have a shared document everyone in the team meeting can see (including TAs and the instructor). Often the share document is most popular. 
+
+Additionally, sometime before the next week (Sunday), you will want to either put into the chat or upload a `.py` file that shows you completed a practice/challenge problem (problems are linked in canvas). You can pick one from any module to work on. While the goal is for you get into the habit of practicing multiple problems each week, this can be the same problem you submit with your homework. 
 
 > [!TIP] 
 > Good notes become a study guide for you and your team! Make sure they include everything you need to help better understand the weekly material. 
@@ -20,10 +22,13 @@ When working in teams, remember do not let one person do all the work. Make sure
 * Deal with logic and control flow for programs using if statements
 * Have a better understanding of True/False (bool) data types. 
 
+> [!TIP]
+> Use a live coding tool (very popular by students, it is an extension with vs code) or a screen share. Then talk through the various code together, guiding the person. The main person coding should do the "least" talking, only doing what is directed. For this reason, swapping who does what each week is helpful. 
+
 
 ## Conditional Operators
 
-As a quick review of operators, we have covered the 'basic' operators meaning we have looked at `+, -, *, /, %`. We are now adding additional 'conditional' operators, which is something you probably have also done since
+As a quick review of operators, we have covered the 'basic' operators meaning we have looked at `+, -, *, /, %`. We are now adding additional **conditional** operators, which is something you probably have also done since
 elementary school, but not something you have thought about as much. Conditional operators. These operators
 look at comparing two values. They are
 
